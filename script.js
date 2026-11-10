@@ -1,10 +1,15 @@
 let tabuada = document.querySelector("#multiplicar");
 tabuada.addEventListener("click", tabuadas);
 
+
 function tabuadas(){
     let n1 = document.querySelector("#num1")
-
     let tab = Number(n1.value);
+
+    if (tab > 10) {
+        resultado.innerText = "Não é possível fazer esta tabuada!";
+        return;
+    }
 
     let total1 = tab * 1;
     let total2 = tab * 2;
